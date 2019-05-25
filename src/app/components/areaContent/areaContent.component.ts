@@ -53,7 +53,7 @@ export class AreaContentComponent implements OnInit {
           // console.log('This is the location: ', this.fullGameSchedule.fullgameschedule.gameentry[0].location);
           for (const schedule of this.fullGameSchedule.fullgameschedule.gameentry) {
             const nfo: ScheduleInterData = {
-              num:count++,
+              num: count++,
               id: schedule.id,
               date: schedule.date,
               time: schedule.time,
