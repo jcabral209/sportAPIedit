@@ -1,0 +1,116 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"> <img src="assets/logo_full_nosport_black.png" wide='300' alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="SelectLeague('MLB')">MLB <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="SelectLeague('NBA')">NBA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="SelectLeague('NFL')">NFL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="SelectLeague('NHL')">NHL</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <div class="row">
+        <div class="col-12 my-3"></div>
+        <div class="col-12 my-3">
+          <button class="frame" (click)="SelectLeague('MLB')"><img src="assets/MLB.gif" width="150" alt=""></button>
+        </div>
+        <div class="col-12">
+        </div>
+        <div class="col-12 my-2">
+          <button class="frame" (click)="SelectLeague('NBA')"><img src="assets/NBA.gif" width="150" alt=""></button>
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12 my-3">
+          <button class="frame" (click)="SelectLeague('NFL')"><img src="assets/NFL.gif" width="150" alt=""></button>
+        </div>
+        <div class="col-12"></div>
+        <div class="col-12 my-3">
+          <button class="frame" (click)="SelectLeague('NHL')"><img src="assets/NHL.gif" width="150" alt=""></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-10 my-4" style="text-align:center">
+
+      <h1>FULL SCHEDULE</h1>
+
+      <h2>{{title}}</h2>
+
+      <div class="row my-5">
+
+        <div class="col-6">
+
+          <ngb-accordion [closeOthers]="true" activeIds="static-1">
+
+            <ngb-panel *ngFor='let score of displayData' id="'static-'{{score.num}}">
+
+              <ng-template ngbPanelTitle>
+                <span><img src="assets/{{league}}/{{score.homeTeamAbbreviation}}.gif?" width="55" alt="">
+                  {{score.homeTeamName}} <b>VS</b> {{score.awayTeamName}}
+                  <img src="assets/{{league}}/{{score.awayTeamAbbreviation}}.gif?" width="55" alt=""></span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <app-display-screen [score]="score"></app-display-screen>
+              </ng-template>
+
+            </ngb-panel>
+          </ngb-accordion>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" [id]="'heading'+score.id">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                    [attr.data-target]="'#collapse'+score.id" aria-expanded="false"
+                    [attr.aria-controls]="'collapse'+score.id">
+
+                    <img src="assets/{{league}}/{{score.homeTeamAbbreviation}}.gif?" width="55" alt="">
+                    {{score.homeTeamName}} <b>VS</b>
+                    {{score.awayTeamName}}
+                    <img src="assets/{{league}}/{{score.awayTeamAbbreviation}}.gif?" width="55" alt="">
+                  </button>
+                </h2>
+              </div>
+
+              <div [id]="'collapse'+score.id" class="collapse" [attr.aria-labelledby]="'heading'+score.id"
+                data-parent="#accordionExample">
+                <div class="card-body">
+                  <app-display-screen [score]="score"></app-display-screen>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

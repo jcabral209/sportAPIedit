@@ -1,0 +1,44 @@
+<div *ngIf="score" class="row">
+  <div class="col-6">
+    <h5>Location</h5>{{score.location}}
+  </div>
+  <div class="col-3">
+    <h5>Date</h5>{{score.date}}
+  </div>
+  <div class="col-3">
+    <h5>Time</h5>{{score.time}}
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="row">
+    <div class="col-12 teamType">
+      <h5>AWAY TEAM</h5>
+    </div>
+
+    <div class="col-6">
+      <app-display-detail [label]="'Name'" [value]="score.awayTeamName"></app-display-detail>
+    </div>
+    <div class="col-6">
+      <app-display-detail [label]="'City'" [value]="score.awayTeamCity"></app-display-detail>
+    </div>
+    <div class="col-6">
+      <app-display-detail [label]="'Abbrv.'" [value]="score.awayTeamAbbreviation"></app-display-detail>
+    </div>
+
+
+    <div class="col-12 teamType">
+      <h5>HOME TEAM</h5>
+    </div>
+
+    <div class="col-6">
+      <app-display-detail [label]="'Name'" [value]="score.homeTeamName"></app-display-detail>
+    </div>
+    <div class="col-6">
+      <app-display-detail [label]="'City'" [value]="score.homeTeamCity"></app-display-detail>
+    </div>
+    <div class="col-6">
+      <app-display-detail [label]="'Abbrv.'" [value]="score.homeTeamAbbreviation"></app-display-detail>
+    </div>
+  </div>
+</div>

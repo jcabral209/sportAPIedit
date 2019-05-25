@@ -1,0 +1,46 @@
+.container-fluid{
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+.card{
+    background-color: white;
+    border-radius: 5px;
+    border-color: orange;
+    border-width: thick;
+    margin: 5px;
+}
+h2 {
+    color: white;
+    
+}
+.frame{
+    border-radius: 5px;
+    border-color: orange;
+    border-width: thick;
+    transition: transform .2s;
+}
+.frame:hover {
+    -ms-transform: scale(1.10); /* IE 9 */
+    -webkit-transform: scale(1.10); /* Safari 3-8 */
+    transform: scale(1.10); 
+  }
+
+h1 {
+    color: white;
+    
+}
+
+.nav-link{
+    
+    transition: transform .2s;
+}
+.nav-link:hover {
+    -ms-transform: scale(1.75); /* IE 9 */
+    -webkit-transform: scale(1.75); /* Safari 3-8 */
+    transform: scale(1.75); 
+  }
+
