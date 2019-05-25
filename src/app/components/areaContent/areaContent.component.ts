@@ -9,6 +9,7 @@ import { ScheduleInterData } from 'src/app/components/interfaces/schedule-inter-
   styleUrls: ['./areacontent.component.css']
 })
 export class AreaContentComponent implements OnInit {
+
   sportNow = 'https://api.mysportsfeeds.com/v1.0/pull/';
   mlbLeague = 'mlb/2019-regular/full_game_schedule'; // MLB Regular Schedule
   nflLeague = 'nfl/2019-regular/full_game_schedule'; // NFL Regular Schedule

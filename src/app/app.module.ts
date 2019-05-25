@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DisplayScreenComponent } from './components/display-screen/display-screen.component';
 import { DisplayDetailComponent } from './components/display-detail/display-detail.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DisplayDetailComponent } from './components/display-detail/display-deta
     FooterComponent,
     AreaContentComponent,
     DisplayScreenComponent,
-    DisplayDetailComponent
+    DisplayDetailComponent,
+    PaginationComponent
 
   ],
   imports: [

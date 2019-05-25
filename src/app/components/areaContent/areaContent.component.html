@@ -71,45 +71,17 @@
 
             </ngb-panel>
           </ngb-accordion>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" [id]="'heading'+score.id">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                    [attr.data-target]="'#collapse'+score.id" aria-expanded="false"
-                    [attr.aria-controls]="'collapse'+score.id">
-
-                    <img src="assets/{{league}}/{{score.homeTeamAbbreviation}}.gif?" width="55" alt="">
-                    {{score.homeTeamName}} <b>VS</b>
-                    {{score.awayTeamName}}
-                    <img src="assets/{{league}}/{{score.awayTeamAbbreviation}}.gif?" width="55" alt="">
-                  </button>
-                </h2>
-              </div>
-
-              <div [id]="'collapse'+score.id" class="collapse" [attr.aria-labelledby]="'heading'+score.id"
-                data-parent="#accordionExample">
-                <div class="card-body">
-                  <app-display-screen [score]="score"></app-display-screen>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
+
+        <div class="col-6 text-align:right">
+          <h1>SEARCH AREA</h1>
+        </div>
+
+        <div class="col-12 my-4 d-flex justify-content-center">
+          <app-pagination></app-pagination>
+        </div>
+
+
       </div>
     </div>
   </div>
